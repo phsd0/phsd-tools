@@ -1,0 +1,28 @@
+{
+  "name": "@phsd/format",
+  "type": "module",
+  "version": "0.0.1",
+  "exports": {
+    "./prettier": "./prettier.config.js"
+  },
+  "scripts": {
+    "check:format": "prettier --check .",
+    "check:lint": "eslint .",
+    "check:types": "tsc --noEmit",
+    "fix:format": "prettier --write .",
+    "fix:lint": "eslint . --fix",
+    "prepublish": "publint"
+  },
+  "dependencies": {
+    "@prettier/plugin-xml": "catalog:lint",
+    "prettier": "catalog:lint",
+    "prettier-plugin-astro": "catalog:lint",
+    "prettier-plugin-svelte": "catalog:lint",
+    "publint": "catalog:lint"
+  },
+  "devDependencies": {
+    "@phsd/lint": "workspace:*",
+    "@phsd/typescript": "workspace:*",
+    "eslint": "catalog:lint"
+  }
+}

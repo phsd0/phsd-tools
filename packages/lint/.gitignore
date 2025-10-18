@@ -1,0 +1,4 @@
+src/typegen.d.ts
+.eslint-config-inspector
+dist
+fixtures/input

@@ -1,0 +1,30 @@
+{
+  "name": "@phsd/typescript",
+  "type": "module",
+  "version": "0.0.1",
+  "exports": {
+    "./react": "./tsconfig.react.json",
+    "./react-lib": "./tsconfig.react-lib.json",
+    "./svelte": "./tsconfig.svelte.json",
+    "./svelte-lib": "./tsconfig.svelte-lib.json",
+    "./lib": "./tsconfig.lib.json",
+    "./base": "./tsconfig.base.json"
+  },
+  "scripts": {
+    "check:format": "prettier --check .",
+    "check:lint": "eslint .",
+    "fix:format": "prettier --write .",
+    "fix:lint": "eslint . --fix",
+    "prepublish": "publint"
+  },
+  "dependencies": {
+    "publint": "catalog:lint"
+  },
+  "devDependencies": {
+    "@phsd/format": "workspace:*",
+    "@phsd/lint": "workspace:*",
+    "eslint": "catalog:lint",
+    "prettier": "catalog:lint",
+    "typescript": "catalog:build"
+  }
+}

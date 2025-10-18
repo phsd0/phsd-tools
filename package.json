@@ -1,0 +1,30 @@
+{
+  "name": "@phsd/tools",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "pnpm run --parallel --recursive build",
+    "check:format": "pnpm run --parallel --recursive check:format",
+    "check:lint": "pnpm run --parallel --recursive check:lint",
+    "check:types": "pnpm run --parallel --recursive check:types",
+    "fix:format": "pnpm run --parallel --recursive fix:format",
+    "fix:lint": "pnpm run --parallel --recursive fix:lint"
+  },
+  "devDependencies": {
+    "@phsd/lint": "workspace:*",
+    "@phsd/typescript": "workspace:*",
+    "eslint": "catalog:lint",
+    "pncat": "catalog:cli"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "pncat"
+    ]
+  }
+}

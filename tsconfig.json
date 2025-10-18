@@ -1,0 +1,7 @@
+{
+  "extends": "@phsd/typescript/lib",
+  "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "moduleDetection": "force",
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true, // allow imports of JSON files
+    "allowJs": true, // allow imports of JavaScript files
+    "checkJs": true, // enable type checking for JavaScript files
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true, // don't allow import from './Foo.ts' of foo.ts
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true, // force the use `import type` `export type` for consistency
+    "skipLibCheck": true
+  }
+}
