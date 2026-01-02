@@ -2,7 +2,7 @@
   "name": "@phsd/tools",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.27.0",
   "engines": {
     "node": ">=24"
   },

@@ -1,9 +1,3 @@
-/* eslint-disable antfu/no-top-level-await */
-
-const xmlPlugin = (await import('@prettier/plugin-xml')).default
-const astroPlugin = await import('prettier-plugin-astro')
-const sveltePlugin = (await import('prettier-plugin-svelte')).default
-
 /**
  * @type {import("prettier").Config}
  */
@@ -11,26 +5,14 @@ export const phsPrettier = {
   jsxSingleQuote: true,
   overrides: [
     {
-      files: '*.astro',
+      files: ['**/*.json', '**/*.jsonc'],
       options: {
-        parser: 'astro',
-      },
-    },
-    {
-      files: '*.svelte',
-      options: {
-        parser: 'svelte',
-      },
-    },
-    {
-      files: '*.svg',
-      options: {
-        parser: 'xml',
-        xmlWhitespaceSensitivity: 'ignore',
+        parser: 'json',
+        trailingComma: 'none',
       },
     },
   ],
-  plugins: [xmlPlugin, astroPlugin, sveltePlugin],
+  plugins: ['prettier-plugin-xml', 'prettier-plugin-astro', 'prettier-plugin-svelte'],
   printWidth: 120,
   semi: false,
   singleQuote: true,
